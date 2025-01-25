@@ -9,8 +9,8 @@ export function fetchQuotes() {
             return response.json();
         })
         .then(data => {
-            console.log('Fetched data:', data.data);
-            return data.data;
+            console.log('Fetched data:', data);
+            return data;
         })
         .catch(error => {
             console.error('Fetch Error:', error);

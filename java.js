@@ -10,7 +10,8 @@ function randomQuote() {
             const randomQuote = quoteData.motivationalQuotes[randomIndex];
 
             console.log(randomQuote); // Display the random quote in the console
-            return randomQuote; // Return the random quote (if needed)
+            let quote = `<p> ${randomQuote} </p>`
+            return document.getElementById("tulos").innerHTML = quote; // Return the random quote (if needed)
         } else {
             console.error("No quotes found in the data.");
         }
