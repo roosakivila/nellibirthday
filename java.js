@@ -1,4 +1,4 @@
-import { fetchQuotes } from "./fetch";
+import { fetchQuotes } from "./fetch.js";
 
 randomQuote();
 
