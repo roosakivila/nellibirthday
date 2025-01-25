@@ -1,7 +1,7 @@
 export function fetchQuotes() {
-    const quoteUrl = "https://raw.githubusercontent.com/roosakivila/nellibirthday/refs/heads/main/motivationalquotes.json";
+    //const quoteUrl = "https://raw.githubusercontent.com/roosakivila/nellibirthday/refs/heads/main/motivationalquotes.json";
 
-    return fetch(quoteUrl)
+    return fetch('motivationalquotes.json')
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
