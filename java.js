@@ -1,7 +1,5 @@
 import { fetchQuotes } from "./fetch.js";
 
-randomQuote();
-
 function randomQuote() {
     fetchQuotes().then(function (quoteData) {
         if (Array.isArray(quoteData.motivationalQuotes) && quoteData.motivationalQuotes.length > 0) {
@@ -20,3 +18,10 @@ function randomQuote() {
     });
 }
 
+function newQuote() {
+    randomQuote();
+}
+// Wait until the DOM is fully loaded before adding the event listener
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("new-quote-btn").addEventListener("click", newQuote);
+});
